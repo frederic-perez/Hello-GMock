@@ -1,5 +1,3 @@
-// --
-
 #include <iostream>
 
 #include <gmock/gmock.h>
@@ -55,5 +53,3 @@ main()
 
   return EXIT_SUCCESS;
 }
-
-// -- eof

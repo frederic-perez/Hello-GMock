@@ -33,18 +33,18 @@ public:
 int
 main()
 {
-	std::cout << "Hello, GMock!" << std::endl;
+  std::cout << "Hello, GMock!" << std::endl;
 
   using namespace testing;
   // The following line causes Google Mock to throw an exception on failure,
   // which will be interpreted by your testing framework as a test failure.
   //
-  //GTEST_FLAG(throw_on_failure) = true;
-  //InitGoogleMock(&argc, argv);
+  // GTEST_FLAG(throw_on_failure) = true;
+  // InitGoogleMock(&argc, argv);
 
   MockTurtle mock_turtle;
   std::cout << "mock_turtle:\n";
-  //ON_CALL(mock_turtle, GetX()).WillByDefault(Return(-1));
+  // ON_CALL(mock_turtle, GetX()).WillByDefault(Return(-1));
   EXPECT_CALL(mock_turtle, GetX())
     .Times(AtLeast(2))
     .WillOnce(Return(42))
@@ -53,7 +53,7 @@ main()
   for (size_t i = 0; i < 4; ++i)
     std::cout << "  x=" << mock_turtle.GetX() << std::endl;
 
-	return EXIT_SUCCESS;
+  return EXIT_SUCCESS;
 }
 
 // -- eof

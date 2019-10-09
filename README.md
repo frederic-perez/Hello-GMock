@@ -1,3 +1,1 @@
-Hello-GMock
-===========
-
+# Hello-GMock
